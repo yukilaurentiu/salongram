@@ -13,8 +13,16 @@ class _Screen2State extends State<Screen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: navBar(context),
+      appBar: navBar(context),
       backgroundColor: Colors.red,
+      body: Row(
+        children: [
+          const Text('My page', style: TextStyle(
+            fontWeight: FontWeight.bold, fontSize: 24.0,
+          ),),
+
+        ],
+      )
     );
   }
 }

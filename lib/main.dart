@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
         colorScheme: ThemeData().colorScheme.copyWith(
           primary: Colors.white,
-
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
