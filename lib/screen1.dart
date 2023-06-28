@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'navBar.dart';
+import 'nav_bar.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
