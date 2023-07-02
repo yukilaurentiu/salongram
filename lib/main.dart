@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salongram/screen1.dart';
 import 'package:salongram/screen2.dart';
+import 'package:salongram/test.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
     initialRoute: '/screen1',
     routes: {
-    '/screen1': (context) => Screen1(),
+    '/screen1': (context) => FlexboxExample(),
       '/screen2': (context) => Screen2(),
       '/screen3': (context) => Screen1(),
     });
