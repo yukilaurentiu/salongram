@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'nav_bar.dart';
 
 class Screen2 extends StatefulWidget {
@@ -35,17 +34,31 @@ List<Widget> card(context) {
     'images/hair4.jpg'
   ];
 
+
   const double picPadding = 5.0;
   final double picSize =
-      (MediaQuery.of(context).size.width / 3) - 2 * picPadding;
+      (MediaQuery.sizeOf(context).width / 3) - 2 * picPadding;
 
   List<Widget> result = [];
+
+  void _launchURL() async {
+    const url = 'https://flutter.dev';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+
+
+
   for (var imgPath in hairImg) {
-    result.add(
-      GestureDetector(
-        onTap: (){},
+    var gestureDetector = GestureDetector(
+        onTap: () => _launchURL(),
         child: Container(
-          padding: const EdgeInsets.fromLTRB(picPadding, picPadding, picPadding, 0),
+          padding: const EdgeInsets.fromLTRB(
+              picPadding, picPadding, picPadding, 0),
           child: Image.asset(
             imgPath,
             fit: BoxFit.cover,
@@ -53,8 +66,12 @@ List<Widget> card(context) {
             height: picSize,
           ),
         ),
-      ),
+      );
+    result.add(
+      gestureDetector,
     );
   }
+
   return result;
 }
+
