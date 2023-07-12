@@ -42,12 +42,14 @@ List<Widget> card(context) {
   List<Widget> result = [];
 
   void _launchURL() async {
-    const url = 'https://flutter.dev';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
+    const url = 'instagram://user?username=yukidailypic&caption=hithere&media=https://www.wwf-junior.de/fileadmin/user_upload/Tiere/1440-Feldhase__MG_0099b__c__J_Fieber__igreen_media__WWF.jpg';
+    // const url = 'instagram://user?username=yukidailypic';
+    await launch(url);
+    // if (await canLaunch(url)) {
+    //   await launch(url);
+    // } else {
+    //   throw 'Could not launch $url';
+    // }
   }
 
 
