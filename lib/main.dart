@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
     initialRoute: '/screen1',
     routes: {
-    '/screen1': (context) => FlexboxExample(),
+    '/screen1': (context) => WebViewApp(),
       '/screen2': (context) => Screen2(),
       '/screen3': (context) => Screen1(),
     });
