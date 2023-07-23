@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     routes: {
     '/screen1': (context) => WebViewApp(),
       '/screen2': (context) => Screen2(),
-      '/screen3': (context) => Screen1(),
+      '/screen3': (context) => Screen2(),
     });
   }
 }
